@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles2.css">
+
+    <title>Check Pet</title>
+</head>
+<body id="body-pd">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                    <a href="#" class="nav__logo">ChekPet
+                        <ion-icon name="paw" class="pet__logo"></ion-icon>
+                    </a>
+                </div>
+                
+                <div class="nav__list">
+                    <a href="inex.htm" class="nav__link active">
+                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Dashboard</span>
+                    </a>
+
+                    <a href="inex2.htm" class="nav__link">
+                        <ion-icon name="chatbubble-ellipses-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Messenger</span>
+                    </a>
+
+                  
+
+                    <a href="inex3.htm" class="nav__link">
+                        <ion-icon name="document-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Ficha</span>
+                    </a>
+
+
+
+                    
+                    <a href="inex4.htm" class="nav__link">
+                        <ion-icon name="fitness-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Patologia</span>
+                    </a>
+
+
+
+                    
+                    <a href="inex5.htm" class="nav__link">
+                        <ion-icon name="extension-puzzle-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Ongs</span>
+                    </a>
+
+
+
+                    <a href="inex6.htm" class="nav__link">
+                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Settings</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" class="nav__link">
+                <ion-icon name="exit-outline" class="nav__icon"></ion-icon>
+                <span class="nav__name">Log out</span>
+            </a>
+        </nav>
+    </div>
+
+
+
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+      
+
+        <form id="ficha-veterinaria">
+            <!-- Informações do Proprietário -->
+            <div class="section">
+                <h3>Informações do Proprietário</h3>
+                <label for="nome_proprietario">Nome:</label>
+                <input type="text" id="nome_proprietario" name="nome_proprietario" required>
+
+                <label for="endereco_proprietario">Endereço:</label>
+                <input type="text" id="endereco_proprietario" name="endereco_proprietario" required>
+
+                <label for="telefone_proprietario">Telefone:</label>
+                <input type="tel" id="telefone_proprietario" name="telefone_proprietario" required>
+            </div>
+
+            <!-- Informações do Animal -->
+            <div class="section">
+                <h3>Informações do Animal</h3>
+                <label for="nome_animal">Nome do Animal:</label>
+                <input type="text" id="nome_animal" name="nome_animal" required>
+
+                <label for="especie_animal">Espécie:</label>
+                <select id="especie_animal" name="especie_animal" required onchange="updateVacinas()">
+                    <option value="">Selecione</option>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="raca_animal">Raça:</label>
+                <input type="text" id="raca_animal" name="raca_animal" required>
+
+                <label for="idade_animal">Idade:</label>
+                <input type="number" id="idade_animal" name="idade_animal" required class="small-input">
+
+                <label for="sexo_animal">Sexo:</label>
+                <select id="sexo_animal" name="sexo_animal" required class="small-input">
+                    <option value="macho">Macho</option>
+                    <option value="femea">Fêmea</option>
+                </select>
+
+                <label for="historico_medico_animal">Histórico Médico:</label>
+                <textarea id="historico_medico_animal" name="historico_medico_animal" rows="4"></textarea>
+
+                <!-- Campo para foto do animal -->
+                <div class="image-upload">
+                    <label for="foto_animal">Carregar Foto do Animal</label>
+                    <input type="file" id="foto_animal" name="foto_animal" accept="image/*" onchange="previewImage(event)">
+                    <div class="image-preview" id="image-preview"></div>
+                </div>
+            </div>
+
+            <!-- Marcar Vacinas -->
+            <div class="section">
+                <h3>Marcar Vacinas</h3>
+                <div id="vacinas-container"></div>
+                <label for="ultima_vacinacao">Última Vacinação (Data):</label>
+                <input type="date" id="ultima_vacinacao" name="ultima_vacinacao" class="small-input">
+            </div>
+
+            <button type="submit" class="submit-btn">Salvar</button>
+        </form>
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

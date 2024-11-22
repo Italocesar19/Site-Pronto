@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Check Pet</title>
+</head>
+<body id="body-pd">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                    <a href="#" class="nav__logo">ChekPet
+                        <ion-icon name="paw" class="pet__logo"></ion-icon>
+                    </a>
+                </div>
+                
+                <div class="nav__list">
+                    <a href="inex.htm" class="nav__link active">
+                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Dashboard</span>
+                    </a>
+
+                    <a href="inex2.htm" class="nav__link">
+                        <ion-icon name="chatbubble-ellipses-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Messenger</span>
+                    </a>
+
+                  
+
+                    <a href="inex3.htm" class="nav__link">
+                        <ion-icon name="document-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Ficha</span>
+                    </a>
+
+
+
+                    
+                    <a href="inex4.htm" class="nav__link">
+                        <ion-icon name="fitness-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Patologia</span>
+                    </a>
+
+
+
+                    
+                    <a href="inex5.htm" class="nav__link">
+                        <ion-icon name="extension-puzzle-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Ongs</span>
+                    </a>
+
+
+
+                    <a href="inex6.htm" class="nav__link">
+                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Settings</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" class="nav__link">
+                <ion-icon name="exit-outline" class="nav__icon"></ion-icon>
+                <span class="nav__name">Log out</span>
+            </a>
+        </nav>
+    </div>
+
+
+    <div class="support-container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Suporte ChekPet</h2>
+            </div>
+            <div id="chat-content" class="chat-content">
+                <!-- Mensagens do chat aparecerão aqui -->
+                <div class="chat-message bot">Olá! Como podemos ajudar?</div>
+                <div class="chat-options">
+                    <button onclick="handleSupportOption('meu-pet-esta-doente')">Meu pet está doente</button>
+                    <button onclick="handleSupportOption('achei-pet-perdido')">Achei um pet perdido</button>
+                    <button onclick="handleSupportOption('problemas-conta')">Estou com problemas na minha conta</button>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+     <script src="main.js"></script>
+</body>
+</html>

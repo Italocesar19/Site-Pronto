@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --nav-width: 92px ;
+
+
+
+    --first-color: #FFEF9D;
+    --bg-color: #ffd80a ;
+    --sub-color: #000 ;
+    --white-color: #000 ;
+
+
+
+    --body-font: 'Poppins', sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+
+
+
+    --z-fixed: 100;
+
+
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 2rem 0 0 6.75rem;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--white-color);
+    padding: 1.5rem 1.5rem 2rem;
+    transition: .5s;
+    z-index: var(--z-fixed);
+}
+
+.nav {
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+overflow: hidden;
+}
+
+.nav__brand {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.nav__toggle{
+    font-size: 1.25rem;
+    padding: .75rem;
+    cursor: pointer;
+}
+
+.nav__logo{
+    color: var(--white-color);
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.pet__logo{
+    font-size: 1.25em;
+}
+
+.nav__link{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: .75rem;
+    padding: .75rem;
+    color: var(--white-color);
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav__link:hover{
+    background-color: var(--first-color);
+}
+
+.nav__icon {
+    font-size: 1.25rem;
+}
+
+.nav__name {
+    font-size: var(--small-font-size);
+}
+
+.expander {
+    width: calc(var(--nav-width) + 9.25rem)
+}
+
+.body-pd{
+    padding: 2rem 0 0 16rem;
+}
+
+.active {
+    background-color: var(--first-color);
+}
+
+.collapse{
+    grid-template-columns: 20px max-content 1fr;
+}
+
+.collapse__link{
+    justify-self: flex-end;
+    transition: .5;
+}
+
+.collapse__menu{
+    display: none;
+    padding: .75rem 2.25rem;
+}
+
+.collapse__sublink{
+    color: var(--sub-color);
+    font-size: var(--small-font-size);
+}
+
+.collapse__sublink:hover{
+    color: var(--white-color);
+}
+
+.showCollapse{
+    display: block;
+}
+
+.rotate{
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #FFD80A; /* Cor alterada */
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.7em;
+    color: #000; /* Cor alterada */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+h3 ion-icon {
+    margin-right: 10px;
+    font-size: 1.8em;
+    color: #000; /* Cor alterada */
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 1.2em;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #FFD80A; /* Cor alterada */
+    background-color: #fff;
+}
+
+input[type="file"] {
+    display: flex;
+}
+
+button.button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #FFD80A; /* Cor alterada */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+button.button:hover {
+    background-color: #e0c107; /* Cor alterada */
+}
+
+button.button:active {
+    background-color: #cba900; /* Cor alterada */
+    transform: scale(0.98);
+}
+
+.profile-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 3px solid #ddd;
+}
+
+.profile-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.profile-container:hover .upload-overlay {
+    opacity: 1;
+}
+
+.profile-picture .overlay ion-icon {
+    color: white;
+    font-size: 2em;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture .overlay ion-icon:hover {
+    transform: scale(1.1);
+}
+
+.upload-overlay input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-overlay span {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+select[multiple] {
+    min-height: 120px;
+    padding: 10px;
+}
+
+select[multiple] option {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+select, .checkbox-group input[type="checkbox"] {
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+}
+
+select:focus, .checkbox-group input[type="checkbox"]:focus {
+    border-color: #FFD80A; /* Cor alterada */
+    outline: none;
+    background-color: #fff;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    display: none; /* Escondemos o checkbox real */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.checkbox-group input[type="checkbox"]:checked + label {
+    background-color: #FFD80A; /* Cor alterada */
+    border-color: #FFD80A; /* Cor alterada */
+    color: white;
+}
+
+.checkbox-group input[type="checkbox"]:not(:checked) + label:hover {
+    background-color: #f0f0f0;
+    border-color: #FFD80A; /* Cor alterada */
+}
+
+/* Estilo para o ícone da marcação */
+.checkbox-group label ion-icon {
+    margin-right: 10px;
+    color: #FFD80A; /* Cor alterada */
+    font-size: 1.5em;
+}
+
+select option:disabled {
+    color: #888;
+    background-color: #f1f1f1;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group ion-icon {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: #888;
+}
+
+/* Estilo para as marcações (checkboxes) de categorias e tipos de animais */
+.select-wrapper select {
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+}
+
+option {
+    font-size: 1.1em;
+    padding: 12px;
+}
+
+/* Efeitos de Transição e Animação */
+input, select, button {
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    button.button {
+        font-size: 1.1em;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - PetShop</title>
+    <link rel="stylesheet" href="Styles3.css">
+    
+    <body id="body-pd">
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <div class="nav__brand">
+                        <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                        <a href="#" class="nav__logo">ChekPet
+                            <ion-icon name="paw" class="pet__logo"></ion-icon>
+                        </a>
+                    </div>
+                    
+                    <div class="nav__list">
+                        <a href="inex.htm" class="nav__link active">
+                            <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+    
+                        <a href="inex2.htm" class="nav__link">
+                            <ion-icon name="chatbubble-ellipses-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Messenger</span>
+                        </a>
+    
+                      
+    
+                        <a href="inex3.htm" class="nav__link">
+                            <ion-icon name="document-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Ficha</span>
+                        </a>
+    
+    
+    
+                        
+                        <a href="inex4.htm" class="nav__link">
+                            <ion-icon name="fitness-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Patologia</span>
+                        </a>
+    
+    
+    
+                        
+                        <a href="inex5.htm" class="nav__link">
+                            <ion-icon name="extension-puzzle-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Ongs</span>
+                        </a>
+    
+    
+    
+                        <a href="inex6.htm" class="nav__link">
+                            <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Settings</span>
+                        </a>
+                    </div>
+                </div>
+    
+                <a href="#" class="nav__link">
+                    <ion-icon name="exit-outline" class="nav__icon"></ion-icon>
+                    <span class="nav__name">Log out</span>
+                </a>
+            </nav>
+        </div>
+    
+
+
+
+
+<div class="container">
+
+    <!-- Perfil do Usuário -->
+    <div class="section">
+        <h3><ion-icon name="person-outline"></ion-icon> Perfil do Usuário</h3>
+        
+        <div class="profile-container">
+            <img id="profileImage" src="https://via.placeholder.com/150" alt="Foto de Perfil">
+            <div class="upload-overlay">
+                <ion-icon name="camera-outline"></ion-icon>
+                <input type="file" id="fileInput" accept="image/*" onchange="updateProfileImage(event)">
+            </div>            
+        </div>
+
+        
+        <div class="form-group">
+            <label for="userName">Nome do Usuário:</label>
+            <input type="text" id="userName" placeholder="Digite o nome do usuário">
+        </div>
+        <div class="form-group">
+            <label for="userDescription">Descrição:</label>
+            <input type="text" id="userDescription" placeholder="Descreva o usuário">
+        </div>
+    </div>
+    
+
+    <!-- Preferências de Produtos -->
+    <div class="section">
+        <h3><ion-icon name="checkmark-circle-outline"></ion-icon> Preferências de Produtos</h3>
+    
+        <!-- Marcação de Categorias -->
+        <div class="form-group">
+            <label for="categories">Categorias:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="alimentacao" name="categories">
+                <label for="alimentacao"><ion-icon name="fast-food-outline"></ion-icon> Alimentação</label>
+                
+                <input type="checkbox" id="higiene" name="categories">
+                <label for="higiene"><ion-icon name="brush-outline"></ion-icon> Higiene</label>
+                
+                <input type="checkbox" id="acessorios" name="categories">
+                <label for="acessorios"><ion-icon name="pencil-outline"></ion-icon> Acessórios</label>
+                
+                <input type="checkbox" id="brinquedos" name="categories">
+                <label for="brinquedos"><ion-icon name="football-outline"></ion-icon> Brinquedos</label>
+            </div>
+        </div>
+    
+        <!-- Marcação de Tipos de Animais Atendidos -->
+        <div class="form-group">
+            <label for="animalTypes">Tipos de Animais Atendidos:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="caes" name="animalTypes">
+                <label for="caes"><ion-icon name="paw-outline"></ion-icon> Cães</label>
+                
+                <input type="checkbox" id="gatos" name="animalTypes">
+                <label for="gatos"><ion-icon name="paw-outline"></ion-icon> Gatos</label>
+                
+                <input type="checkbox" id="passaros" name="animalTypes">
+                <label for="passaros"><ion-icon name="paw-outline"></ion-icon> Pássaros</label>
+                
+                <input type="checkbox" id="roedores" name="animalTypes">
+                <label for="roedores"><ion-icon name="paw-outline"></ion-icon> Roedores</label>
+            </div>
+        </div>
+    
+    <!-- Exemplo de opções de marcação (checkboxes) -->
+    
+
+   <!-- Opções de Pagamento -->
+<div class="section">
+    <h3><ion-icon name="card-outline"></ion-icon> Opções de Pagamento</h3>
+
+    <!-- Marcação de Métodos de Pagamento -->
+    <div class="form-group">
+        <label for="paymentMethods">Métodos de Pagamento:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="cartaoCredito" name="paymentMethods">
+            <label for="cartaoCredito"><ion-icon name="card-outline"></ion-icon> Cartão de Crédito</label>
+            
+            <input type="checkbox" id="boleto" name="paymentMethods">
+            <label for="boleto"><ion-icon name="document-text-outline"></ion-icon> Boleto</label>
+            
+            <input type="checkbox" id="pix" name="paymentMethods">
+            <label for="pix"><ion-icon name="qr-code-outline"></ion-icon> Pix</label>
+        </div>
+    </div>
+
+    <!-- Marcação de Número Máximo de Parcelas -->
+    <div class="form-group">
+        <label for="installments">Número Máximo de Parcelas:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="parcelas1" name="installments">
+            <label for="parcelas1">1x</label>
+            
+            <input type="checkbox" id="parcelas2" name="installments">
+            <label for="parcelas2">2x</label>
+            
+            <input type="checkbox" id="parcelas3" name="installments">
+            <label for="parcelas3">3x</label>
+            
+            <input type="checkbox" id="parcelas6" name="installments">
+            <label for="parcelas6">6x</label>
+            
+            <input type="checkbox" id="parcelas12" name="installments">
+            <label for="parcelas12">12x</label>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Opções de Localização -->
+    <div class="section">
+        <h3><ion-icon name="location-outline"></ion-icon> Opções de Localização</h3>
+        <div class="form-group">
+            <label for="state">Estado:</label>
+            <select id="state" onchange="updateCities()">
+                <option value="">Selecione o estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="city">Cidade:</label>
+            <select id="city">
+                <option value="">Selecione a cidade</option>
+                <!-- As cidades serão carregadas dinamicamente aqui -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" placeholder="Digite o CEP">
+        </div>
+    </div>
+
+    <button class="button" onclick="saveSettings()">Salvar Configurações</button>
+</div>
+
+
+<script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<script src="main2.js"></script>
+</body>
+</html>
